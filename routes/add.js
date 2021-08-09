@@ -15,7 +15,7 @@ router.get('/', auth, (req,res)=>{
     });
 })
 
-router.post('/', auth, courseValidators,  
+router.post('/authorization', auth, courseValidators,  
  async (req,res)=>{
     const errors = validationResult(req);
     if(!errors.isEmpty()){
